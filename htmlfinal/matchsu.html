@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+    <title>
+        Match Summary
+    </title>
+    <script>
+        function myfunc() {
+            var sc1 = document.getElementById("scoreA").value;
+            var sc2 = document.getElementById("scoreB").value;
+            var first = document.getElementById("teamA").value;
+            var Sec = document.getElementById("teamB").value;
+            var res1 = new Array();
+            var res2 = new Array();
+            res1 = sc1.split("/");
+            res2 = sc2.split("/");
+            if (parseInt(res1[0]) > parseInt(res2[0])) {
+                document.getElementById("dem").innerHTML = first;
+
+
+            } else {
+                document.getElementById("dem").innerHTML = Sec;
+
+            }
+
+
+
+        }
+    </script>
+</head>
+
+<body bgcolor="lightgreen">
+    <center>
+        <h1 style="color: purple;">MATCH SUMMARY
+        </h1>
+        <form>
+
+
+            <table>
+                <tr>
+                    <td style="color: red;">TEAM A:
+                    </td>
+                    <td><input type="text" id="teamA" name="teamA" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="color: red;">TEAM B:
+                    </td>
+                    <td><input type="text" id="teamB" name="teamB" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="color: red;">DATE:
+                    </td>
+                    <td><input type="date" id="date" name="date" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="color: red;">TIME:
+                    </td>
+                    <td><input type="time" id="time" name="time" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="color: red;">TEAM A Score:
+                    </td>
+                    <td><input type="text" id="scoreA" name="scoreA" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="color: red;">TEAM B Score:
+                    </td>
+                    <td><input type="text" id="scoreB" name="scoreB" required>
+                    </td>
+                </tr>
+            </table>
+            <input type="submit" value="save" onclick="myfunc()">
+            <h4 style="color: blue;">WINNING TEAM:</h4>
+            <p id="dem"></p>
+
+
+    </center>
+    </form>
+    <a href="file:///C:/Users/Mahavir/Desktop/HTML/webpage.html">
+        <b style="color: blue;">Back</b>
+</body>
+
+</html>

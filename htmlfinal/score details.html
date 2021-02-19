@@ -1,0 +1,43 @@
+<html>
+
+<head>
+    <style>
+        .one {
+            border-style: double;
+            border-width: 20px;
+        }
+    </style>
+
+    <script>
+        function myfunc() {
+            var sc = document.getElementById("score").value;
+            var res = new Array();
+            res = sc.split(',');
+            var i = 0;
+            var j = 0;
+            var i = parseInt(res[0]) * 1 + parseInt(res[1]) * 2 + parseInt(res[2]) * 3 + parseInt(res[3]) * 4 + parseInt(res[4]) * 6;
+            document.getElementById("dem").innerHTML = i;
+        }
+    </script>
+</head>
+
+
+<body bgcolor="pink" class="one">
+    <center>
+        <br><br>
+        <h3 style="color: blueviolet;">
+            <strong class="double">SCORE METER</strong></h3>
+        <p><strong>(Enter the number of singles, double, triple, fours and sixes in comma seperated format.)</strong></p>
+        <br>
+        <h5>ENTER THE SCORE DETAILS:
+            <input type="text" id="score" name="score">
+            <input type="submit" onclick="myfunc()">
+        </h5>
+        <h4 style="color: chocolate;">Total Score:</h4>
+        <p id="dem"></p>
+    </center>
+    <a href="file:///C:/Users/Mahavir/Desktop/HTML/webpage.html">
+        <b style="color: blue;">Back</b>
+</body>
+
+</html>
